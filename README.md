@@ -38,6 +38,7 @@ The repository includes:
 **Installation:**  
 ```bash
 pip install pandas numpy scikit-learn matplotlib seaborn
+```
 
 ## Map of Documentation
 
