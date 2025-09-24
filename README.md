@@ -42,6 +42,8 @@ pip install pandas numpy scikit-learn matplotlib seaborn
 
 ## Map of Documentation
 
+In this section, you should provide an outline or tree illustrating the hierarchy of folders and subfolders contained in your Project Folder, and listing the files stored in each folder or subfolder.
+
 ## Reproducing Results
 
 Follow these steps to reproduce the results of this project:
