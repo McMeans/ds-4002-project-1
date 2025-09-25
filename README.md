@@ -35,7 +35,25 @@ pip install pandas numpy scikit-learn matplotlib seaborn
 
 ## Map of Documentation
 
-In this section, you should provide an outline or tree illustrating the hierarchy of folders and subfolders contained in your Project Folder, and listing the files stored in each folder or subfolder.
+```
+DS-4002-PROJECT-1/
+│
+├─ data/
+│   ├─ amazon_fashion.csv
+│   └─ Amazon_Fashion.json
+│
+├─ output/
+│   └─ final_data.csv
+│
+├─ scripts/
+│   ├─ analysis.ipynb
+│   └─ cleaning.ipynb
+│
+├─ .gitattributes
+├─ .gitignore
+├─ LICENSE
+└─ README.md
+```
 
 ## Reproducing Results
 
