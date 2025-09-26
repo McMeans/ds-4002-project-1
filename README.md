@@ -43,13 +43,18 @@ DS-4002-PROJECT-1/
 ├─ data/
 │   ├─ amazon_fashion.csv
 │   └─ Amazon_Fashion.json
+│   └─ README.md
 │
 ├─ output/
+│   └─ 1_distribution.png
+│   └─ 2_percentages.png
+│   └─ 3_pairwise.png
 │   └─ final_data.csv
 │
 ├─ scripts/
 │   ├─ analysis.ipynb
 │   └─ cleaning.ipynb
+│   └─ hypothesis_testing.ipynb
 │
 ├─ .gitattributes
 ├─ .gitignore
@@ -69,11 +74,14 @@ Follow these steps to reproduce the results of this project:
 - Access to the Amazon Fashion review dataset
 
 ## Step 1: Data Acquisition and Setup
-1. **Download the Amazon Fashion dataset** (2.5 million reviews) and place the files in the `data/` folder:
-   - `amazon_fashion.csv` - Main dataset file
-   - `Amazon_Fashion.json` - Alternative JSON format (if available)
+1. **Clone the ds-4002-project-1 repo locally** – may need to use GitHub LFS due to the large size of the data files:
+```
+git lfs install
+```
+   - `Amazon_Fashion.json` - the raw file downloaded
+   - `amazon_fashion.csv` - the cleaned dataset with relevant columns used for analysis
 
-2. **Verify project structure** matches the documentation tree:
+1. **Verify project structure** matches the documentation tree:
 
 ```
 DS-4002-PROJECT-1/
@@ -81,6 +89,7 @@ DS-4002-PROJECT-1/
 ├─ data/
 │   ├─ amazon_fashion.csv
 │   └─ Amazon_Fashion.json
+│   └─ README.md
 │
 ├─ output/
 │   └─ final_data.csv
@@ -88,6 +97,7 @@ DS-4002-PROJECT-1/
 ├─ scripts/
 │   ├─ analysis.ipynb
 │   └─ cleaning.ipynb
+│   └─ hypothesis_testing.ipynb
 │
 ├─ .gitattributes
 ├─ .gitignore
@@ -95,26 +105,10 @@ DS-4002-PROJECT-1/
 └─ README.md
 ```
 
-## Step 2: Data Cleaning and Preprocessing
-1. **Open `scripts/cleaning.ipynb`** in Jupyter Notebook
-
-2. **Execute data cleaning steps:**
-   - Load the raw Amazon Fashion dataset from `data/amazon_fashion.csv`
-   - Select relevant columns: star ratings, review text, helpful votes, verified purchase, review title
-   - Remove rows with missing values in critical columns
-   - Perform text preprocessing:
-     - Convert text to lowercase
-     - Remove extra whitespace
-     - Apply TF-IDF vectorization to review text
-   - Create additional features:
-     - Review length (character/word count)
-     - Presence of emotional words
-   - Export cleaned dataset to `output/final_data.csv`
-
-## Step 3: Exploratory Data Analysis
+## Step 2: Exploratory Data Analysis
 1. **Open `scripts/analysis.ipynb`** in Jupyter Notebook
 
-2. **Load the cleaned dataset** from `output/final_data.csv`
+2. **Load the cleaned dataset** from `data/amazon_fashion.csv`
 
 3. **Conduct exploratory analysis:**
    - Distribution of star ratings
@@ -122,7 +116,7 @@ DS-4002-PROJECT-1/
    - Text feature analysis
    - Correlation between variables
 
-## Step 4: Model Training and Prediction
+## Step 3: Model Training and Prediction
 1. **Continue in `scripts/analysis.ipynb`** or create separate modeling section:
 
 2. **Prepare data for modeling:**
@@ -140,20 +134,22 @@ DS-4002-PROJECT-1/
    - Generate predicted ratings
    - Save predictions alongside actual ratings
 
-## Step 5: Model Evaluation
-1. **Calculate performance metrics:**
+## Step 4: Model Evaluation
+1. **Continue in `scripts/analysis.ipynb`**
+   
+2. **Calculate performance metrics:**
    - Overall accuracy (target: ≥80%)
    - Mean Absolute Error (MAE)
    - Precision, Recall, F1-score for each rating class
    - Generate confusion matrix
 
-2. **Create visualizations:**
+3. **Create visualizations:**
    - Predicted vs Actual ratings scatter plot
    - Confusion matrix heatmap
    - Review length analysis plots
 
-## Step 6: Hypothesis Testing
-1. **Prepare data for statistical testing:**
+## Step 5: Hypothesis Testing
+1. **In `hypothesis_testing.ipynb`, prepare data for statistical testing:**
    - Calculate prediction errors (actual - predicted)
    - Classify predictions into three groups:
      - Over-predicted: Predicted > Actual
@@ -181,7 +177,7 @@ DS-4002-PROJECT-1/
    - Report test statistics, p-values, and conclusions
    - Interpret findings in context of model performance
 
-## Step 7: Results Documentation
+## Step 6: Results Documentation
 1. **Generate final outputs:**
    - All visualizations saved as PNG files
    - Statistical test results summary
@@ -194,7 +190,8 @@ DS-4002-PROJECT-1/
 
 ## File Execution Order
 1. `scripts/cleaning.ipynb` - Data preprocessing
-2. `scripts/analysis.ipynb` - EDA, modeling, and hypothesis testing
+2. `scripts/analysis.ipynb` - EDA, modeling
+3. `scripts/hypothesis_testing.ipynb` - hypothesis testing
 
 ## Expected Outcomes
 - Clean dataset with ~2.5M Amazon Fashion reviews
