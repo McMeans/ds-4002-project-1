@@ -35,11 +35,11 @@ We want to create a system that translates review text into an estimated star ra
 **Exploratory Plots:**
 
 1. Number of reviews for each star rating  
-   ![](blank.png)
+   ![](../output/1_distribution.png)
 2. Predicted vs Actual plot (percentage distribution based on the actual)  
-   ![](blank.png)
+   ![](../output/2_percentages.png)
 3. Scatter plots of review length, number of helpful votes, and predicted rating  
-   ![](blank.png)
+   ![](../output/3_pairwise.png)
 
 
 ## References
