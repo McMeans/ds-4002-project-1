@@ -1,5 +1,7 @@
 # Predicting Product Ratings from Amazon Reviews Using Weighted Keyword Analysis
 
+A project for UVA's DS 4002 course aimed at predicting Amazon product ratings based on user review text using weighted keyword analysis.
+
 ## Overview
 This repository contains a project aimed at predicting Amazon product ratings based on the text of user reviews using a **weighted keyword analysis** approach. The goal is to develop a predictive model with at least 80% accuracy by analyzing the correlation between frequently used words in reviews and their corresponding star ratings. This project can help potential buyers better evaluate products by contextualizing subjective reviews.
 
